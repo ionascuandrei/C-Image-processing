@@ -1,0 +1,57 @@
+   Pentru a lucra cu matricea de pixeli am realizat o structura PIXEL:r,g,b 
+careia i-am declarat pointerii(matrici) image si image2. Image2 va fi folosit 
+ca si copie pentru a realiza Task-ul 2.
+
+   !Fiind un program fara functii care sa micsoreze numarul de linii de cod 
+si totul este realizat brut, acestea sunt liniile pentru fiecare Subtask din 
+program
+   De asemenea, programul prezinta si comentarii pentru a delimita mai usor
+si a explica pasii urmati
+	- 1 -> 94 = Declarari|Citire fisier input|Citirea fisierului BMP
+	- 95 -> 101 = Task 1
+	- 102 -> 121 = Afisare Task 1
+	- 122 -> 591 = TASK 2 - Filtrul 1
+	- 592 -> 608 = Afisare Task 2 - Filtrul 1
+	- 609 -> 1062 = Task 2 - Filtrul 2
+	- 1063 -> 1080 = Afisare Task 2 - Filtrul 2
+	- 1081 -> 1533 = Task 2 - Filtrul 3
+	- 1534 -> 1549 = Afisare Task 2 - Filtrul 3
+	- 1550 -> 1559 = Eliberare memorie image si image2
+	- 1560 -> 1614 = Task 4
+	- 1615 -> 1640 = Afisare Task 4, eliberare memorie si
+			oprire program
+ 
+  Fisiere folosite : 
+input_file = fisierul de input de tip text
+our_image = imaginea bmp de input de tip binar
+out = imaginea de output pentru Task1
+output_f1 = imaginea de output pentru Task2 - f1
+output_f2 = imaginea de output pentru Task2 - f2
+output_f3 = imaginea de output pentru Task2 - f3
+	Task1
+   Programul va calcula suma celor 3 culori (R+B+G) si va inlocui valoare 
+pixelilor cu cu partea intreaga a sumei impartita la 3.
+	Task2
+   Stiind formatul celor 3 filtre programul va merge din pixel in pixel si 
+va aplica formula pentru el vecinii acestuia astfel:
+   -va merge pe interiorul matricei (fara margini) si va aplica filtrul 
+corespunzator normal
+   -va merge pe fiecare margine si va aplica filtrul corespunzator doar pe 
+laturile disponibile fara a iesi in exteriorul matricei (verificare prin 
+multiple structuri if)
+	Task4
+   Programul va citi fileheader-ul si infoheader-ul si va salva pixelii in
+matricea image4 cu structura R,G,B in felul urmator:
+	-va citi pentru inceput din fisier linia si coloana primului pixel
+si va intra in cele doua for-uri pentru a parcurge fiecare pixel si a-i
+aloca culoarea necesara in functie de datele din fisier
+	-daca linia si coloana sunt identice cu i(linia) si j(coloana) din
+for atunci inseamna ca pixelul citit din fisier se afla in unul din cazurile:
+		=marginea imaginii
+		=pixel de trecere intre doua grupari de pixeli
+	-daca nu este cazul anterior atunci inseamna ca fisierul ne-a dat un
+pixel aflat la granita dintre doua grupari si pana acolo vor fi umpluti
+pixelii de culoarea ultimului pixel salvat (variabilele r,g,b)
+
+   La finalul fiecarui task se vor elibera matricele de pixeli: image,
+image2 si image4
