@@ -1,27 +1,7 @@
-   https://ocw.cs.pub.ro/courses/programare/teme_2016/tema2_2016_cbd_123123abcdabcd
-   
-   Pentru a lucra cu matricea de pixeli am realizat o structura PIXEL:r,g,b 
+Ionascu Andrei
+	Pentru a lucra cu matricea de pixeli am realizat o structura PIXEL:r,g,b 
 careia i-am declarat pointerii(matrici) image si image2. Image2 va fi folosit 
 ca si copie pentru a realiza Task-ul 2.
-
-   !Fiind un program fara functii care sa micsoreze numarul de linii de cod 
-si totul este realizat brut, acestea sunt liniile pentru fiecare Subtask din 
-program
-   De asemenea, programul prezinta si comentarii pentru a delimita mai usor
-si a explica pasii urmati
-	- 1 -> 94 = Declarari|Citire fisier input|Citirea fisierului BMP
-	- 95 -> 101 = Task 1
-	- 102 -> 121 = Afisare Task 1
-	- 122 -> 591 = TASK 2 - Filtrul 1
-	- 592 -> 608 = Afisare Task 2 - Filtrul 1
-	- 609 -> 1062 = Task 2 - Filtrul 2
-	- 1063 -> 1080 = Afisare Task 2 - Filtrul 2
-	- 1081 -> 1533 = Task 2 - Filtrul 3
-	- 1534 -> 1549 = Afisare Task 2 - Filtrul 3
-	- 1550 -> 1559 = Eliberare memorie image si image2
-	- 1560 -> 1614 = Task 4
-	- 1615 -> 1640 = Afisare Task 4, eliberare memorie si
-			oprire program
  
   Fisiere folosite : 
 input_file = fisierul de input de tip text
